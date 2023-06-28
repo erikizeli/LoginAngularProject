@@ -19,10 +19,6 @@ export class LoginPageComponent {
     password:''
   }
 
-  onSubmit(){
-    console.log(this.formData)
-  }
-
   login = async (
   ) => {
 
@@ -40,10 +36,11 @@ export class LoginPageComponent {
           const token = response.token;
           localStorage.setItem("token",token)
           localStorage.setItem('loggedIn','true')
-          await this.router.navigate(["/main"])
+          localStorage.setItem('email',this.formData.email)
+          this.router.navigate(["/main"])
         },
         error => {
-          console.log('Error: ', error)
+          alert("Invalid email or password")
         }
       )
   }

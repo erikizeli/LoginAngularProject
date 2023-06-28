@@ -3,9 +3,9 @@
         <div class="form-div">
             <form class="wrap" (ngSubmit)="login()">
                 <label>Email</label>
-                <input type="text" name="email" [(ngModel)]="formData.email">
+                <input type="text" [(ngModel)]="formData.email" name="email">
                 <label>Password</label>
-                <input type="text" name="password" [(ngModel)]="formData.password">
+                <input type="text" [(ngModel)]="formData.password" name="password">
                 <button type="submit">Login</button>
             </form>
         </div>

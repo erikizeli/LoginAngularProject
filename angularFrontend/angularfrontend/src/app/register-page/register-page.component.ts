@@ -27,12 +27,6 @@ export class RegisterPageComponent {
     role:''
   }
 
-  onSubmit(){
-    console.log(this.formData)
-  }
-
-  /*constructor() {}*/
-
   register = async (
   ) => {
 
@@ -44,15 +38,12 @@ export class RegisterPageComponent {
       "role":this.formData.role
     }
 
-    console.log(requestBody)
-
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
 
     this.http.post("http://localhost:8080/api/v1/auth/register", requestBody, { headers } )
     .subscribe(
-      async response => {console.log(response)},
-      error => {console.log('Error: ', error)}
+      response => {this.router.navigate([''])},
+      error => {alert("Fill out mandatory fields")}
     )
-    await this.router.navigate([''])
   }
 }

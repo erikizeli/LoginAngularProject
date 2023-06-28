@@ -1,20 +1,9 @@
 <div class="body-container">
 <div class="container">
   <div class="text-outer-container">
-    <div class="text-container">
-      <div class="text-block">
-        <p>tehén</p>
-        <p>tej</p>
-        <p>tej</p>
-        <p>tejgkljadgjad fgjfdgsldf gdlk</p>
-      </div>
-      <div class="post-button">
-        <input>
-        <button>POST</button>
-      </div>
-    </div>
-    <div class="text-container"></div>
-    <div class="text-container"></div>
+    <app-container [addData]="addData" [element]="user" role="user" ></app-container>
+    <app-container [addData]="addData" [element]="manager" role="management" ></app-container>
+    <app-container [addData]="addData" [element]="admin" role="admin" ></app-container>
   </div>
   <div class="logout">
     <button (click)="logout()" >Log out</button>

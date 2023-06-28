@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import {AuthGuard} from "./auth.guard";
-import { TextcontainerComponent } from './textcontainer/textcontainer.component';
+import { ContainerComponent } from './container/container.component';
 
 
 @NgModule({
@@ -19,7 +19,7 @@ import { TextcontainerComponent } from './textcontainer/textcontainer.component'
     LoginPageComponent,
     RegisterPageComponent,
     MainpageComponent,
-    TextcontainerComponent,
+    ContainerComponent,
   ],
   imports: [
     HttpClientModule,
